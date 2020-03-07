@@ -17,7 +17,7 @@ router.get("/status", async (req, res) => {
         let system = {
             total_nodes: nodes.length
         };
-        res.json({system: system, node: nodes});
+        res.json({system: system, nodes: nodes});
     })
 });
 
