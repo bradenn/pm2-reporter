@@ -8,9 +8,9 @@ let apiRoute = require('./routes');
 index.use('/', apiRoute);
 
 
-index.listen(5001, function () {
-    let port = 5001;
-    if (process.env.PORT) port = process.env.PORT;
+let port = 5001;
+if (process.env.PORT) port = process.env.PORT;
+index.listen(port, function () {
     console.log(`Express server started. Listing on port ${port}.`);
 });
 

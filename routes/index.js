@@ -1,7 +1,7 @@
 let router = require('express').Router();
 let pm2 = require('pm2');
 
-router.get("/", async (req, res) => {
+router.get("/status", async (req, res) => {
     pm2.list((err, list) => {
         let nodes = list.map(item => {
             return {
