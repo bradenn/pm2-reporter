@@ -11,7 +11,8 @@ index.use('/', apiRoute);
 let port = 5001;
 if (process.env.PORT) port = process.env.PORT;
 index.listen(port, function () {
-    console.log(`Express server started. Listing on port ${port}.`);
+    console.log(`pm2-reporter started; listing on port ${port}`);
+    console.log(`Copyright © ${new Date().getFullYear()} BN Media`);
 });
 
 module.exports = index;
